@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Objeto Equipamentos - JS</title>
+</head>
+<body>
+    <h2>Atividade com Objetos - Equipamentos</h2>
+    <p>Confira o console do navegador (F12).</p>
+
+    <script>
+        let equipamento = {
+            codigo: 101,
+            nome: "Impressora Laser",
+            preco: 1500.00
+        };
+
+        let equipamentos = [];
+        equipamentos.push(equipamento);
+
+        let novoEquipamento = {
+            codigo: 102,
+            nome: "Monitor LED",
+            preco: 800.00
+        };
+
+        equipamentos.push(novoEquipamento);
+
+        console.log("Lista de Equipamentos:");
+        equipamentos.forEach(function(item) {
+            console.log(`Código: ${item.codigo} | Nome: ${item.nome} | Preço: R$ ${item.preco.toFixed(2)}`);
+        });
+
+        equipamentos.forEach(function(item) {
+            item.preco *= 1.10;
+        });
+
+        console.log("\nPreços atualizados:");
+        equipamentos.forEach(function(item) {
+            console.log(`Código: ${item.codigo} | Nome: ${item.nome} | Novo Preço: R$ ${item.preco.toFixed(2)}`);
+        });
+    </script>
+</body>
+</html>
